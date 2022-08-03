@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import {mobile} from "../responsive";
 
 const Register = () => {
   return (
@@ -36,13 +37,14 @@ const RegisterContainer = styled.div`
  align-items: center;
  justify-content: center;
 `;
+
 const Wrapper = styled.div`
-width: 40%;
-padding: 20px;
-background-color:#fff;
-
-
+  width: 40%;
+  padding: 20px;
+  background-color: #fff;
+  ${mobile({ width: "75%" })}
 `;
+
 const Title = styled.h1`
 font-size: 24px;
 font-weight: 300;

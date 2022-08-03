@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import {mobile} from "../responsive";
 
 
 const CategoryItem = ({item}) => {
@@ -25,9 +26,10 @@ const CategoryItemContainer = styled.div`
  position:relative;
 `;
 const Image = styled.img`
-width:100%;
-height:100%;
-object-fit:cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  ${mobile({ height: "40vh" })}
 `;
 const Info = styled.div`
   position: absolute;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ArrowLeftOutlinedIcon from "@material-ui/icons/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@material-ui/icons/ArrowRightOutlined";
 import { sliderItems } from "../data";
+import {mobile} from "../responsive"
 
 
 const Slider = () => {
@@ -53,7 +54,8 @@ const SliderContainer = styled.div`
   display: flex;
   background-color: #fff7f7;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
+  ${mobile({ display: "none" })}
 `;
 const Wrapper = styled.div`
 height: 100%;

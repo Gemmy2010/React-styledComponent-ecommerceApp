@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Badge } from '@material-ui/core';
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 import SearchOutlinedIcon from "@material-ui/icons/SearchOutlined";
+import {mobile} from '../responsive';
 
 
 
@@ -43,15 +44,18 @@ const NavBarContainer = styled.div`
   height: 60px;
   background-color: #32cd32;
   color: #ffffff;
+  ${mobile({height:"50px"})}
+
+ 
 `;
 
 const Wrapper = styled.div`
-padding: 10px 20px;
-display:flex;
-align-items: center;
-justify-content:space-between;
-display:flex;
-
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  ${mobile({ padding: "10px 0px" })}
 `;
 
 
@@ -77,31 +81,33 @@ const NavCenter = styled.div`
     padding: 10px 0px;
     outline: 0;
     color: #fff;
+    ${mobile({ width: "50px" })}
   }
 `;
 const NavRight = styled.div`
   flex: 1;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
-
+  ${mobile({ flex: 2,justifyContent: "center" })}
 `;
 
 const Languages = styled.div`
-font-size: 14px;
-cursor: pointer;
-
+  font-size: 14px;
+  cursor: pointer;
+  ${mobile({display:"none"})}
 `;
 
 const Logo = styled.div`
-font-weight:bold;
-font-style: italic;
+  font-weight: bold;
+  font-style: italic;
+  ${mobile({ fontSize: "16px" })}
 `;
 
 const MenuItem = styled.div`
-font-size: 14px;
-cursor:pointer;
-margin-left:25px;
-
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 25px;
+  ${mobile({ fontSize: "12px", marginLeft: "10px"})}
 `;
 

@@ -1,6 +1,8 @@
 import { Facebook, Instagram, MailOutline, Phone, Room, Twitter } from '@material-ui/icons';
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import {mobile} from '../responsive';
+
 
 
 
@@ -62,10 +64,10 @@ export default Footer;
 
 
 const FooterContainer = styled.div`
-background-color:#32cd32;
-display:flex;
-color: #fff;
-
+  background-color: #32cd32;
+  display: flex;
+  color: #fff;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 
@@ -103,7 +105,7 @@ margin-left: 20px;
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  
+  ${mobile({ display: "none" })}
 `;
 
 
